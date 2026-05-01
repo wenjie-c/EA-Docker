@@ -1,0 +1,13 @@
+services:
+  vivebook-backend:
+    image: iamwenjie/vivebook-backend
+    ports:
+      - "9000:1337"
+    env_file:
+      - .env
+  mongo:
+    container_name: "mongo"
+    image: mongo
+    # build: .  <-- Note: Usually you use 'image' OR 'build', not both for the same service unless using a custom Dockerfile
+    ports:
+      - "27017:27017"
