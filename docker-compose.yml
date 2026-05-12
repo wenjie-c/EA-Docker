@@ -14,8 +14,8 @@ services:
     #   - SERVER_PORT=1337
     #   - JWT_ACCESS_SECRET=LLAVE TEMPORAL
 
-  mongo:
-    container_name: "mongo"
+  mongodb:
+    container_name: "mongodb"
     image: mongo
     ports:
       - "27017:27017"
