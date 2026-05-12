@@ -1,0 +1,6 @@
+[submodule "vivebook-backend/EA-ViveBook-Backend"]
+	path = vivebook-backend/EA-ViveBook-Backend
+	url = https://github.com/muyw1234/EA-ViveBook-Backend.git
+[submodule "vivebook-frontend-web/EA-ViveBook-Frontend-Web"]
+	path = vivebook-frontend-web/EA-ViveBook-Frontend-Web
+	url = https://github.com/muyw1234/EA-ViveBook-Frontend-Web

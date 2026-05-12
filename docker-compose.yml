@@ -2,12 +2,25 @@ services:
   vivebook-backend:
     image: iamwenjie/vivebook-backend
     ports:
-      - "9000:1337"
+      - "1337:1337"
     env_file:
       - .env
+        # volumes:
+        #- type: bind
+        #source: .env
+        #target: /app/.env
+    # environment:
+    #   - MONGO_URI=mongodb://mongo:27017/vivebook_DB
+    #   - SERVER_PORT=1337
+    #   - JWT_ACCESS_SECRET=LLAVE TEMPORAL
+
   mongo:
     container_name: "mongo"
     image: mongo
-    # build: .  <-- Note: Usually you use 'image' OR 'build', not both for the same service unless using a custom Dockerfile
     ports:
       - "27017:27017"
+  
+  vivebook-frontend-web:
+    image: iamwenjie/vivebook-frontend-web
+    ports:
+    - "8080:80"
