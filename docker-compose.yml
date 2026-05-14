@@ -1,6 +1,7 @@
 services:
   vivebook-backend:
     image: iamwenjie/vivebook-backend
+    container_name: 'vivebook-backend'
     ports:
       - "1337:1337"
     env_file:
@@ -19,7 +20,9 @@ services:
     image: mongo
     ports:
       - "27017:27017"
-  
+    volumes:
+      - "./data:/data/db"
+
   vivebook-frontend-web:
     image: iamwenjie/vivebook-frontend-web
     ports:
